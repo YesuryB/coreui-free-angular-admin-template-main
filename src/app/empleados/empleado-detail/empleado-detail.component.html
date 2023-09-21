@@ -1,0 +1,41 @@
+<c-card class="mx-4">
+    <c-card-body class="p-4">
+        <form cForm [formGroup]="empleadoForm">
+            <h1>EMPLEADO</h1>
+            <p class="text-medium-emphasis">Datos Generales</p>
+            <c-input-group class="mb-3">
+                <span cInputGroupText>Identificación:</span>
+                <input autoComplete="documento" cFormControl type="text" id="documento" formControlName="documento" placeholder="Documento" />
+            </c-input-group>
+            <c-input-group class="mb-3">
+                <span cInputGroupText>Nombre completo:</span>
+                <input autoComplete="nombre" cFormControl type="text" id="nombre" formControlName="nombre" placeholder="Nombre" />
+            </c-input-group>
+            <c-input-group class="mb-3">
+                <span cInputGroupText>Correo:</span>
+                <input autoComplete="email" cFormControl type="text" id="correoelectronico" formControlName="correoelectronico" placeholder="Email" />
+            </c-input-group>
+            <c-input-group class="mb-3">
+                <span cInputGroupText>Correo:</span>
+                <input autoComplete="empresa" cFormControl type="text" id="empresa" formControlName="empresa" placeholder="Empresa" />
+            </c-input-group>
+            <div class="mb-3">
+                <span cInputGroupText>Tipo de descuento:</span>
+                <select aria-label="Tipo Descuento" cSelect id="tipodescuento" formControlName="tipodescuento">
+                    <option *ngFor="let descuentol of listaDescuentos" [ngValue]="descuentol.id">{{ descuentol.nombre }}</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <select aria-label="Estatus" cSelect id="estatus" formControlName="estatus">
+                    <option *ngFor="let estatusl of listaEstados" [ngValue]="estatusl.id">{{ estatusl.nombre }}</option>
+                </select>
+            </div>
+            <c-col xs="3">
+                <div class="d-grid">
+                    <button cButton color="success" (click)="guardarEmpleado()">Guardar</button>
+                </div>
+            </c-col>
+
+        </form>
+    </c-card-body>
+</c-card>
