@@ -1,2 +1,146 @@
 // Here you can add other styles
+@import url('https://fonts.googleapis.com/css2?family=Yantramanav:wght@300;400;500;700;900&display=swap');
 
+
+body {
+    font-family: 'Yantramanav', sans-serif;
+}
+
+.body-custom {
+    background: #e7eef8 !important;
+}
+
+//*** NAVBAR ***//
+.header-custom {
+    border: none;
+
+    .breadcrum-custom a {
+        color: #404fe0;
+        font-weight: 500;
+        text-decoration: none;
+    }
+}
+
+
+//*** SIDEBAR ***//
+.sidebar-custom {
+    background-color: #404fe0;
+    color: #fff;
+
+    .logo-sidebar-custom {
+        padding: 15px;
+    }
+
+    .sidebar-brand {
+        background: #3e4bcd;
+    }
+
+    .sidebar-nav .nav-group.show .nav-group-toggle {
+        color: #fff;
+
+        svg {
+            color: #fff;
+        }
+    }
+
+    .sidebar-nav .nav-link.active {
+        color: #fff;
+    }
+
+    .footer-sidebar-custom {
+        background: #3e4bcd;
+    }
+}
+
+//*** LIST ***//
+.list-custom {
+    .header-list-custom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .title-list-custom {
+            margin-left: 0 !important;
+            margin: 25px;
+            font-weight: 900;
+        }
+
+        .btn-list-custom {
+            border-radius: 3px;
+            background: #F9A33D;
+            border: none;
+            padding: 10px 30px;
+            font-weight: 500;
+            letter-spacing: 0.75px;
+
+            &:hover {
+                background: #f18b0e;
+            }
+        }
+
+    }
+
+    .body-list-custom {
+        border: none;
+    }
+}
+
+//*** TABLE ***//
+.table-custom {
+    th {
+        text-transform: uppercase;
+        color: #727272;
+        font-weight: 500;
+    }
+
+    // .td-nombre {
+    //     text-transform: lowercase;
+
+    //     &:first-letter{
+    //         text-transform: uppercase;
+    //     }
+    // }
+}
+
+//*** EMPLEADO DETAIL ***//
+.detail-card-custom {
+    border: none;
+
+    .subtitle-card-custom {
+        color: rgba(44, 56, 74, 0.681) !important;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+    }
+
+    // .form-detail-custom{
+    //     display: flex;
+    //     .mb-3{
+    //         width: 100%;
+    //         background-color: #404fe0;
+    //     }
+    // }
+
+    .btn-detail-custom {
+        margin-top: 15px;
+        width: 45%;
+        text-transform: uppercase;
+        font-weight: 600;
+        letter-spacing: 1.2px;
+        background-color: #F9A33D;
+        border: none;
+        padding: 15px;
+        border-radius: 3px;
+        color: #fff;
+
+        &:hover {
+            background-color: #f18b0e;
+            color: #fff;
+        }
+    }
+
+    .container-btn-detail-custom {
+        display: flex;
+        justify-content: center;
+    }
+}
