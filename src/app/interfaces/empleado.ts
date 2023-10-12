@@ -9,7 +9,7 @@ export class Empleado {
     tipodescuento?: string;
     correoelectronico?: string;
     clave?: string;
-    empresa?: string;
+    empresa: string = "";
     codigopayday?:string;
     fechaingreso?: string;
 }

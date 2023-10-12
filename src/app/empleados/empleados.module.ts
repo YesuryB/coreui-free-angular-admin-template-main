@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { EmpleadosListComponent } from './empleados-list/empleados-list.component';
+import { EmpleadosListComponent} from './empleados-list/empleados-list.component';
 import { EmpleadosRoutingModule } from './empleados-routing.module';
 import {
   AccordionModule,
@@ -28,11 +28,13 @@ import {
 } from '@coreui/angular';
 import { EmpleadoDetailComponent } from './empleado-detail/empleado-detail.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { LogTransactionComponent } from './log-transaction/log-transaction.component';
 
 @NgModule({
   declarations: [
     EmpleadosListComponent,
-    EmpleadoDetailComponent
+    EmpleadoDetailComponent,
+    LogTransactionComponent,
   ],
   imports: [
     CommonModule,

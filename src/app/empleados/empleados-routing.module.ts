@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { EmpleadosListComponent } from './empleados-list/empleados-list.component';
 import { EmpleadoDetailComponent } from './empleado-detail/empleado-detail.component';
+import { LogTransactionComponent } from './log-transaction/log-transaction.component';
 const routes: Routes = [
   {
     path: '',
@@ -19,6 +20,13 @@ const routes: Routes = [
         children: []
       },
       {
+        path: 'empleados-list/:estado',
+        component: EmpleadosListComponent,
+        data: {
+          title: 'Lista de Empleados'
+        }
+      },
+      {
         path: 'empleado-detail',
         component: EmpleadoDetailComponent,
         data: {
@@ -30,6 +38,20 @@ const routes: Routes = [
         component: EmpleadoDetailComponent,
         data: {
           title: 'Empleado'
+        }
+      },
+      {
+        path: 'log-transaction',
+        component: LogTransactionComponent,
+        data: {
+          title: 'Logs'
+        }
+      },
+      {
+        path: 'log-transaction/:documento',
+        component: LogTransactionComponent,
+        data: {
+          title: 'Logs'
         }
       }
     ]

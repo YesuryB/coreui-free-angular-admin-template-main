@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { DefaultLayoutComponent } from './containers';
+import { EmpleadosListComponent } from './empleados/empleados-list/empleados-list.component';
 
 const routes: Routes = [
   {

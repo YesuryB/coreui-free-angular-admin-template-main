@@ -87,6 +87,7 @@ body {
 
 //*** TABLE ***//
 .table-custom {
+    
     th {
         text-transform: uppercase;
         color: #727272;
@@ -100,6 +101,19 @@ body {
     //         text-transform: uppercase;
     //     }
     // }
+    .btn-list-custom2 {
+        border-radius: 3px;
+        background: #F9A33D;
+        border: groove;
+        border-color: #e7eef8;
+        padding: 10px 30px;
+        font-weight: 500;
+        letter-spacing: 0.75px;
+
+        &:hover {
+            background: #f18b0e;
+        }
+    }
 }
 
 //*** EMPLEADO DETAIL ***//

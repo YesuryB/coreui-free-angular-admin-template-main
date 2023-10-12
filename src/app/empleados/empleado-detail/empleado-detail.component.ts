@@ -49,6 +49,7 @@ export class EmpleadoDetailComponent implements OnInit {
             empresa: empleado.empresa,
             // Asigna más campos según corresponda
           });
+          this.empleadoForm.disable();
           console.log("Esto tiene formgroup: ", empleado)
         }
       });

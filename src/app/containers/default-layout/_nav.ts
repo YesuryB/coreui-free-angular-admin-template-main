@@ -19,11 +19,11 @@ export const navItems: INavData[] = [
         name: 'Listados de Empleados',
         url: '/empleados/empleados-list'
       },
-      /*{
-        name: 'Select',
-        url: '/forms/select'
-      },
       {
+        name: 'Logs de Transacciones',
+        url: '/empleados/log-transaction'
+      },
+      /*{
         name: 'Checks & Radios',
         url: '/forms/checks-radios'
       },

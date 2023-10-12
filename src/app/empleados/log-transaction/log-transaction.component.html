@@ -1,0 +1,60 @@
+<!--p>log-transaction works!</p-->
+<c-row ngPreserveWhitespaces>
+    <c-col xs="12" class="list-custom">
+      <div class="header-list-custom">
+        <h2 class="title-list-custom">
+          <strong>Log de Transacciones</strong>
+        </h2>
+      </div>
+      <c-card class="mb-4 body-list-custom">
+        <c-card-body style="padding: 25px;">
+          <div href="components/table#hoverable-rows">
+            <form cForm [formGroup]="logsForm" class="form-detail-custom">
+              <c-row class="mb-3">
+                <c-col xs="6">
+                  <label cLabel for="nombre"> Buscar por nombre:</label>
+                  <input autoComplete="nombre" cFormControl type="text" id="nombre"
+                    formControlName="nombre" placeholder="Nombre" />
+                </c-col>
+                <c-col xs="6">
+                  <label cLabel for="tienda"> Buscar por Marca:</label>
+                  <input autoComplete="tienda" cFormControl type="text" id="tienda"
+                    formControlName="tienda" placeholder="Tienda" />
+                </c-col>
+              </c-row>
+            </form>
+            <table [hover]="true" cTable class="table-custom">
+              <thead>
+                <tr>
+                  <th scope="col">
+                    <strong> Cedula </strong>
+                  </th>
+                  <th scope="col">
+                    <strong> Nombre </strong>
+                  </th>
+                  <th scope="col">
+                    <strong> Tienda </strong>
+                  </th>
+                  <th scope="col">
+                    <strong> Marca </strong>
+                  </th>
+                  <th scope="col">
+                    <strong> Fecha </strong>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let llog of listaLogs">
+                  <td>{{llog.documento}}</td>
+                  <td class="td-nombre">{{llog.nombre}}</td>
+                  <td>{{llog.tienda}}</td>
+                  <td>{{llog.marca}}</td>
+                  <td>{{llog.fecharegistro}}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </c-card-body>
+      </c-card>
+    </c-col>
+  </c-row>

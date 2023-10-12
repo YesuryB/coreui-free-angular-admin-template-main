@@ -5,6 +5,7 @@ import { Observable } from 'rxjs';
 import { Empleado } from '../interfaces/empleado';
 import { Estado } from '../interfaces/estado';
 import { Descuento } from '../interfaces/descuento';
+import { LogsTransactions } from '../interfaces/logs-transactions';
 @Injectable({
   providedIn: 'root'
 })
@@ -17,6 +18,9 @@ export class EmpleadoService {
   }
   getEstadoList(): Observable<Estado[]> {
     return this.http.get<Estado[]>(`${this.enpoint}Estados`)
+  }
+  getLogList(): Observable<LogsTransactions[]> {
+    return this.http.get<LogsTransactions[]>(`${this.enpoint}Empleados/log`)
   }
   getEmpleado(id:number): Observable<Empleado> {
     return this.http.get<Empleado>(`${this.enpoint}Empleados/id?id=${id}`)

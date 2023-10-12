@@ -10,12 +10,23 @@
     <c-card class="mb-4 body-list-custom">
       <c-card-body style="padding: 25px;">
         <div href="components/table#hoverable-rows">
+          <form cForm [formGroup]="empleadoForm" class="form-detail-custom">
+            <c-row class="mb-3">
+              <c-col xs="6">
+                <label cLabel for="nombre"> Buscar por nombre:</label>
+                <input autoComplete="nombre" cFormControl type="text" id="nombre"
+                  formControlName="nombre" placeholder="Nombre" />
+              </c-col>
+              <c-col xs="6">
+                <label cLabel for="empresa"> Buscar por empresa:</label>
+                <input autoComplete="empresa" cFormControl type="text" id="empresa"
+                  formControlName="empresa" placeholder="Empresa" />
+              </c-col>
+            </c-row>
+          </form>
           <table [hover]="true" cTable class="table-custom">
             <thead>
               <tr>
-                <th scope="col">
-                  <strong> Codigo </strong>
-                </th>
                 <th scope="col">
                   <strong> Cedula </strong>
                 </th>
@@ -23,20 +34,28 @@
                   <strong> Nombre </strong>
                 </th>
                 <th scope="col">
+                  <strong> Empresa </strong>
+                </th>
+                <th scope="col">
                   <strong> Tipo Descuento </strong>
                 </th>
                 <th scope="col">
                   <strong> Estatus </strong>
                 </th>
+                <th scope="col">
+                  <strong> Fecha de Ingreso </strong>
+                </th>
               </tr>
             </thead>
             <tbody>
               <tr *ngFor="let emp of listaEmpleados" routerLink="/empleados/empleado-detail/{{emp.id}}">
-                <td>{{emp.codigopayday}}</td>
                 <td>{{emp.documento}}</td>
                 <td class="td-nombre">{{emp.nombre}}</td>
+                <td>{{emp.empresa}}</td>
                 <td>{{emp.tipodescuento}}</td>
                 <td>{{emp.estatus}}</td>
+                <td>{{emp.fechaingreso}}</td>
+                <button cButton class="btn-list-custom2" (click)="verLog(emp.documento)">Ver Log</button>
               </tr>
             </tbody>
           </table>
